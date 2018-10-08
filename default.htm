@@ -53,7 +53,7 @@ webgazer.setGazeListener(function(data, elapsedTime) {
 }).begin();
 
 
-$( window ).unload(function() {
+$(window).on("beforeunload", function() { 
   webgazer.end();
 });
 </script>      
