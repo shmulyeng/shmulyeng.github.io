@@ -8,7 +8,7 @@
     padding: 10px;
   }
 
-  loc {
+  #loc {
       border: solid 1px #6c757d;
       position: absolute;
   }
