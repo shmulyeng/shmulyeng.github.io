@@ -16,7 +16,7 @@
   Bootstrap docs: https://getbootstrap.com/docs
 -->
 
-<div class="container">
+<!-- <div class="container">
     <div class="row">
       <div class="col">
         1 of 2
@@ -36,7 +36,8 @@
         3 of 3
       </div>
     </div>  
-  </div>
+  </div> -->
+  <div id="loc">^</div>
 <script>
 webgazer.setGazeListener(function(data, elapsedTime) {
     if (data == null) {
@@ -44,6 +45,9 @@ webgazer.setGazeListener(function(data, elapsedTime) {
     }
     var xprediction = data.x; //these x coordinates are relative to the viewport
     var yprediction = data.y; //these y coordinates are relative to the viewport
+    
+    $("loc").css( { left: xprediction + "px", top: yprediction + "px" } );
+    $("loc").text(xprediction+"."+yprediction);
     console.log(xprediction+"."+yprediction); //elapsed time is based on time since begin was called
 }).begin();
 
